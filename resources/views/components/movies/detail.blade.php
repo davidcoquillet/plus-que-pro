@@ -9,9 +9,7 @@
             <p class="text-gray-700"><span class="font-semibold">id2:</span> {{ $movie['id'] }}</p>
             <img src="https://image.tmdb.org/t/p/w200/{{ $movie['poster_path'] }}"/>
             <div class="flex justify-end">
-                <button type="button" id="editMovie" data-movie-id="{{ $movie['id'] }}" class="px-6 py-2 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Edit</button>
-            </div>
-            <div class="flex justify-end">
+                <button type="button" id="editMovie" data-movie-id="{{ $movie['id'] }}" class="mx-6 px-6 py-2 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Edit</button>
                 <button type="button" id="deleteMovie" data-movie-id="{{ $movie['id'] }}" class="px-6 py-2 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Delete</button>
             </div>
     </div>

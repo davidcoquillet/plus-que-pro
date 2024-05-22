@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Genre;
 use App\Models\Movie;
+use Illuminate\Database\Eloquent\Collection;
 
 class MovieRepository 
 {
@@ -41,5 +42,14 @@ class MovieRepository
 
             $movie->genres()->sync($genres);
         }
+    }
+
+    /**
+     * @param string $query
+     * @return Collection $collection
+     */
+    public function searchMovie(string $query): Collection
+    {
+        return Movie::where('original_title', 'LIKE', "%{$query}%")->get();
     }
 }

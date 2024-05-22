@@ -13,5 +13,7 @@ Route::middleware([
     Route::get('/movie/{movie}', [MovieController::class, 'getMovieDetails'])->name('movie');
     Route::get('/movie/editMode/{movie}', [MovieController::class, 'getMovieEditMode'])->name('movieEditMode');
     Route::post('/movie/edit/{movie}', [MovieController::class, 'editMovie'])->name('editMovie');
-    Route::post('/movie/delete/{movie}', [MovieController::class, 'deleteMovie'])->name('deleteMovie');
+    Route::get('/movie/delete/{movie}', [MovieController::class, 'deleteMovie'])->name('deleteMovie');
+    Route::post('/movie/search', [MovieController::class, 'search'])->name('searchMovie');
+    Route::get('/resetTests', [MovieController::class, 'resetTests'])->name('resetTests');
 });

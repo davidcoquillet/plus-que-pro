@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property int $moviedb_id
@@ -25,6 +26,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Movie extends Model
 {
+    use SoftDeletes;
+
     /**
      * @var array
      */
